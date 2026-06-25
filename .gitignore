@@ -1,0 +1,22 @@
+# Dataset
+candidates.jsonl
+
+# Generated files
+metadata_cache.json
+metadata_cache_summary.json
+faiss_index.bin
+
+# Model
+model_weights/
+
+# Outputs
+submission.csv
+output.csv
+ranker.log
+
+# Python
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/

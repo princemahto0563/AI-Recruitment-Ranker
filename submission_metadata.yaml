@@ -1,0 +1,45 @@
+# Redrob Hackathon — Submission Metadata
+
+team_name: "Founding-AI-Engineers"
+
+primary_contact:
+  name: "Prince Mahto"
+  email: "princemahto@example.com"
+  phone: "+91-9876543210"
+
+team_members:
+  - name: "Prince Mahto"
+    email: "princemahto@example.com"
+    role: "ML Engineer"
+
+github_repo: "https://github.com/princemahto/redrob-ranker"
+sandbox_link: "https://huggingface.co/spaces/princemahto/redrob-ranker"
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "MacBook Pro M2"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.13.9"
+  os: "macOS 14.5"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: true
+  pre_computation_time_minutes: 5
+
+ai_tools_used:
+  - "Gemini"
+  - "Cursor"
+
+ai_usage_summary: |
+  Used Gemini for solution architecture planning, code modularization, and helper script design. No candidate profile data was fed into external APIs.
+
+methodology_summary: |
+  A hybrid scoring architecture combining semantic cosine similarity (using local BGE-small embeddings and FAISS index search) with lexical BM25 skill overlap matching, experience target alignments, and company pedigree weights (startup/Big Tech booster and IT services penalty). Applies multiplicative modifiers for login recency, notice periods, and response rates. Leverages a custom 4-tier profile validation script to pre-filter and drop all 88 honeypot profiles before scoring.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

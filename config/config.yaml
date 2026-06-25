@@ -1,0 +1,50 @@
+# Redrob AI Candidate Ranker System Configuration
+
+model:
+  name: "BAAI/bge-small-en-v1.5"
+  local_path: "./model_weights/bge-small-en-v1.5" # Optional path if downloaded locally
+
+scoring_weights:
+  semantic: 40.0
+  lexical: 0.25
+  experience_match: 15.0
+  service_penalty: -15.0
+  bigtech_boost: 20.0
+  aistartup_boost: 20.0
+  prodstartup_boost: 10.0
+
+location:
+  target_cities:
+    - "noida"
+    - "pune"
+    - "gurgaon"
+    - "delhi"
+    - "ncr"
+  local_boost: 10.0
+  relocation_boost: 8.5
+  unwilling_boost: 2.0
+  intl_boost: 0.05
+
+behavior_multipliers:
+  notice_period:
+    under_30: 1.0
+    under_60: 0.85
+    under_90: 0.6
+    above_90: 0.25
+  recency:
+    under_30: 1.0
+    under_90: 0.9
+    under_180: 0.7
+    above_180: 0.3
+  open_to_work:
+    true_val: 1.0
+    false_val: 0.8
+  interview_completion:
+    min_multiplier: 0.7
+
+paths:
+  candidates: "./candidates.jsonl"
+  job_description: "./job_description.txt"
+  index: "./faiss_index.bin"
+  metadata_cache: "./metadata_cache.json"
+  output: "./submission.csv"
