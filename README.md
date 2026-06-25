@@ -1,3 +1,18 @@
+## AI Recruitment Ranker
+
+Semantic AI-powered candidate ranking system built for the India Runs Data & AI Challenge.
+
+## Features
+
+- Semantic Resume Matching
+- BGE Embeddings
+- FAISS Vector Search
+- Hybrid Scoring
+- Explainable AI
+- Dynamic JD Parsing
+- Candidate Ranking
+- CPU Optimized
+
 # Redrob Candidate Discovery & Ranking Engine
 
 A production-grade, highly scalable, and generalized candidate matching and ranking system designed to discover and rank the top 100 best-fit candidates from a pool of 100,000 for any recruiter, role, and candidate dataset.
